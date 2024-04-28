@@ -4,11 +4,8 @@
 
 <div class="card">
     <div class="card-header">
-        <a name=""
-            id=""
-            class="btn btn-primary"
-            href="crear.php"
-            role="button">
+
+        <a name="" id="" class="btn btn-primary"href="crear.php"role="button">
             Agregar registro
             </a>
     </div>

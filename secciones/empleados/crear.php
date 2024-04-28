@@ -60,7 +60,7 @@
     </div>
 
     <button
-        type="submit"class="btn btn-success">Agregar Registro</button>
+        type="submit"class="btn btn-success">Agregar</button>
         <a name="" id=""class="btn btn-primary" href="index.php"role="button">Cancelar</a>
         
     </form>
