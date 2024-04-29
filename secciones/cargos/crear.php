@@ -1,3 +1,19 @@
+<?php 
+include("../../bd.php");
+
+if ($_POST) {
+    print_r($_POST);
+
+    $nombrecargo = isset($_POST["nombrecargo"]) ? $_POST["nombrecargo"] : "";
+    $sentencia = $conexion->prepare("INSERT INTO tbl_cargos(id, nombrecargo) 
+    VALUES (null, :nombrecargo)");
+
+    $sentencia->bindParam(':nombrecargo', $nombrecargo);
+    $sentencia->execute();
+    header("Location:index.php");
+}
+?>
+
 <?php include("../../templates/header.php"); ?>
 
 <br />
@@ -13,8 +29,8 @@
                 <input type="text" class="form-control" name="nombrecargo" id="nombrecargo" aria-describedby="helpId" placeholder="Nombre del cargo" />
             </div>
 
-            <button type="submit"class="btn btn-success">Agregar</button>
-        <a name="" id=""class="btn btn-primary" href="index.php"role="button">Cancelar</a>
+            <button type="submit" class="btn btn-success">Agregar</button>
+            <a name="" id="" class="btn btn-primary" href="index.php" role="button">Cancelar</a>
 
         </form>
     </div>
